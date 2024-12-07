@@ -1,0 +1,93 @@
+/* Reseteamos márgenes y rellenos para todos los elementos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  background-color: black;
+  color: red;
+  font-family: 'OCR A', monospace; /* Fuente OCR A */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Estilo de la pantalla */
+.screen {
+  width: 80%;
+  max-width: 600px; /* Máxima anchura para móviles */
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid red;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Estilos para el logo de peligro */
+.danger-logo {
+  width: 100px; /* Tamaño del logo */
+  margin-bottom: 20px;
+  animation: blink 1s infinite;
+}
+
+/* Animación de parpadeo del logo */
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Estilos para el mensaje principal */
+.hacked-message {
+  font-size: 50px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  z-index: 2;
+}
+
+/* Estilos para el subtítulo */
+.sub-message {
+  font-size: 30px;
+  margin-top: 20px;
+  z-index: 2;
+}
+
+/* Estilos para la fecha */
+.date-message {
+  font-size: 40px;
+  margin-top: 20px;
+  font-weight: bold;
+  z-index: 2;
+  opacity: 0;
+  animation: revealDate 1s 2s forwards;
+}
+
+/* Animación para mostrar la fecha */
+@keyframes revealDate {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
